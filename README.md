@@ -2,11 +2,11 @@
 
 Script que nos permite efectuar un ataque de fuerza bruta sobre un fichero xmlrpc.php en Wordpress. Para que se pueda realizar este ataque, es necesario contar con acceso a este fichero primero, el cual se encuentra en el directorio de Wordpress:
 
-  DIRECTORIO WORDPRESS/xmlrpc.php
+	DIRECTORIO WORDPRESS/xmlrpc.php
   
 Este ataque lanza una serie de peticiones POST a la función **wp.getUsersBlogs** con la combinación de usuario y contraseña proporcionados:
 
-  <methodCall>
+ 	<methodCall>
 		<methodName>wp.getUsersBlogs</methodName> 
 		<param><value>{username}</value></param>
 		<param><value>{password}</value></param>
@@ -24,6 +24,6 @@ Básicamente, solo deberás modificar el listado de usuarios, el diccionario, y 
 
 El script está programado en python 2 y puede ser ejecutado simplemente mandándolo a llamar:
 
-  python2 xmlrpc-brute-force.py
+ 	python2 xmlrpc-brute-force.py
   
 ![19](https://user-images.githubusercontent.com/25083316/178153859-c3aa815d-30b1-48d9-9c3b-deea05790d80.png)
